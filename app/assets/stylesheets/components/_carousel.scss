@@ -1,0 +1,23 @@
+.carousel {
+  width:100%;
+  height:50vh;
+}
+
+@media(max-width:768px){
+	.carousel{
+	  height: 30vh;
+	}
+}
+
+.picture-carousel {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  // background-position: center;
+  height: 50vh;
+  object-fit: cover;
+}
+
+@media(max-width:768px){
+  .picture-carousel{
+	  height: 30vh;
+	}
+}

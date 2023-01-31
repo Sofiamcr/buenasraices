@@ -1,0 +1,29 @@
+.banner {
+  padding: 150px 2vw;
+}
+
+@media(max-width:768px){
+	.banner{
+	  padding: 8vh 2vw;
+	}
+}
+
+.banner h1 {
+  margin: 0;
+  color: $verde;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+.banner h2 {
+  margin-top: 1vh;
+  color: $gris;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  letter-spacing: 1vw;
+}
+
+.banner p {
+  margin-top: 0.5vh;
+  color: $negro;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
