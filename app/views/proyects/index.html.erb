@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Buenas Raices</h1>
+<div class="card">
+  <% @proyects.each do |proyect| %>
+    <h2><%= proyect.name%></h2>
+    <h3><%= proyect.category%></h3>
+    <p><%= proyect.location %></p>
+    <p><%= proyect.description%></p>
+  <% end %>
+</div>
