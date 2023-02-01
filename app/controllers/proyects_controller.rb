@@ -18,7 +18,7 @@ class ProyectsController < ApplicationController
   private
 
   def proyect_params
-    params.require(:proyect).permit(:name, :description, :category, :location)
+    params.require(:proyect).permit(:name, :description, :category, :location, photos: [])
   end
 
 end
