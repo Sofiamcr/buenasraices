@@ -7,7 +7,6 @@
 //$headers-font: "Nunito", "Helvetica", "sans-serif";
 $body-font:'Outfit', sans-serif;
 $headers-font:'Outfit', sans-serif;
-
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
@@ -16,4 +15,8 @@ $headers-font:'Outfit', sans-serif;
 //        font-url('FontFile.woff') format('woff'),
 //        font-url('FontFile.ttf') format('truetype')
 // }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "Moon Time Regular";
+  src: font-url('/assets/fonts/MoonTime-Regular.otf') format("truetype");
+}
+$my-font: "Moon Time Regular";
