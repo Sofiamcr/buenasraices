@@ -15,6 +15,10 @@ class ProyectsController < ApplicationController
     redirect_to proyects_path
   end
 
+  def show
+    # @proyect = Proyect.find(:params)
+  end
+
   private
 
   def proyect_params

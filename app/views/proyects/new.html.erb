@@ -1,7 +1,7 @@
 <div class="image_form">
   <div class="new_proyect_form">
     <h1>New proyect</h1>
-    <%= form_for @proyect do |f| %>
+    <%= simple_form_for @proyect do |f| %>
       <div class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
