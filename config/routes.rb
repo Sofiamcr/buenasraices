@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :categories do
-    resources :proyects, only: [:new, :create, :index]
+    resources :proyects, only: [:new, :create]
   end
-  resources :proyects, only: [:destroy, :show, :edit, :update]
+  resources :proyects, only: [:destroy, :edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
