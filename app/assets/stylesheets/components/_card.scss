@@ -64,3 +64,59 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+
+.card-intro{
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 50%;
+  }
+  .intro-description{
+    height: 100%;
+    width: 50%;
+    overflow: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // h4{
+    //   margin-bottom: 2rem;
+    // }
+    p{
+      text-align: center;
+      margin:1rem 1rem;
+      font-size: calc(1rem + 0.2vw)
+    }
+  }
+}
+
+@media (min-width: 100px) and (max-width: 575px){
+  .card-intro{
+    flex-direction: column;
+    img{
+      object-fit: cover;
+      object-position: center;
+      height: 50%;
+      width: 100%;
+    }
+    .intro-description{
+      height: 50%;
+      width: 100%;
+      p{
+        height: 70%;
+        margin:0.1rem 0.1rem;
+        font-size: calc(0.8rem + 0.2vw)
+      }
+    }
+  }
+}
