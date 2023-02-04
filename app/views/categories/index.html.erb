@@ -10,10 +10,10 @@
       <%= image_tag("Huerta.webp", class: "picture-carousel d-sm-block w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("muelle.jpg", class: "picture-carousel d-sm-block w-100") %>
+      <%= image_tag("Deck.webp", class: "picture-carousel d-sm-block w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("Huerta.webp", class: "picture-carousel d-sm-block w-100") %>
+      <%= image_tag("Pergola.webp", class: "picture-carousel d-sm-block w-100") %>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -39,7 +39,7 @@
   <div class="slider">
     <% @categories.each do |category| %>
       <%= link_to category_path(category) do %>
-        <div class="item card-category">
+        <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/<%= category.image_url%>');">
           <h1><%=category.name%></h1>
         </div>
       <% end %>
