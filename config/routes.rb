@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'category/new'
   devise_for :users
-  root to: "pages#home"
+  root to: "categories#index"
 
   resources :categories do
     resources :proyects, only: [:new, :create]
