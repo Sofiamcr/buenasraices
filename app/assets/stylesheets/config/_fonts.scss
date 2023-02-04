@@ -1,12 +1,16 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Old+Standard+TT:ital@1&family=Outfit&family=Playfair+Display&display=swap');
+
 
 // Define fonts for body and headers
 //$body-font: "Work Sans", "Helvetica", "sans-serif";
 //$headers-font: "Nunito", "Helvetica", "sans-serif";
+// font-family: 'Libre Caslon Display', serif;
+// font-family: 'Old Standard TT', serif;
+// font-family: 'Playfair Display', serif;
 $body-font:'Outfit', sans-serif;
-$headers-font:'Outfit', sans-serif;
+$headers-font:'Playfair Display', serif;
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
@@ -17,6 +21,6 @@ $headers-font:'Outfit', sans-serif;
 // }
 @font-face {
   font-family: "Moon Time Regular";
-  src: font-url('/assets/fonts/MoonTime-Regular.otf') format("truetype");
+  src: font-url('/assets/MoonTime-Regular.otf') format("truetype");
 }
 $my-font: "Moon Time Regular";

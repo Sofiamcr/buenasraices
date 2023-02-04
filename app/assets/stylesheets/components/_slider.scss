@@ -1,10 +1,16 @@
 // slider used in the index
 .slider-wrapper{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  // margin-top: 5vw;
+  margin-bottom: 7vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media(max-width:768px){
+	.slider-wrapper{
+    // margin-top: 5vh;
+    margin-bottom: 7vh;
+	}
 }
 .slider{
   width: 90vw;
@@ -54,4 +60,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.left .right {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: $negro;
+  font-size: 5rem;
+  overflow: hidden;
+  z-index: 100;
+}
 //end slider index

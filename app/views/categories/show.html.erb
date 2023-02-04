@@ -1,35 +1,32 @@
-<div class="container">
-  <h1><%= @category.name %></h1>
-  <h4>Maderas | Madera2 | Madera3</h4>
-  <div class="card-intro">
-    <%= image_tag @category.image_url %>
-    <div class="intro-description">
-      <h4><%= @category.name %></h4>
-      <p><%= @category.description %></p>
-    </div>
-  </div>
 
-
-  <%# proyect portfolio %>
-  <div class="cards">
-    <% @proyects.each do |proyect|%>
-      <div class="card-proyect">
-        <div data-controller="lightbox">
-          <% proyect.photos.each_with_index do |photo, index| %>
-            <% if index.zero?%>
-              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-            <% else %>
-              <a href="<%=photo.url %>"></a>
-            <% end %>
-          <% end %>
-        </div>
-        <div class="card-proyect-info">
-          <%=proyect.name %>
-          <%= proyect.wood %>
-          <%=proyect.location %>
-        </div>
-      </div>
-    <%end %>
+<div class="card-intro">
+  <%= image_tag @category.image_url %>
+  <div class="intro-description">
+    <h1><%= @category.name.upcase %></h1>
+    <p><%= @category.description %></p>
   </div>
-  <%# proyect portfolio %>
 </div>
+<div class="project-intro">
+  <h1>Our Projects:</h1>
+</div>
+<%# proyect portfolio %>
+<div class="cards">
+  <% @proyects.each do |proyect|%>
+    <div class="card-proyect">
+      <div data-controller="lightbox" data-lightbox-options-value='{"controls": true, "loop":true}'>
+        <% proyect.photos.each_with_index do |photo, index| %>
+          <% if index.zero?%>
+            <%= cl_image_tag photo.key %>
+          <% else %>
+            <a href="<%=photo.url %>"></a>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="card-proyect-info">
+        <p><i class="fa-solid fa-tree"></i> <%= proyect.wood %></p>
+        <p><i class="fa-sharp fa-solid fa-location-dot"></i> <%=proyect.location %></p>
+      </div>
+    </div>
+  <%end %>
+</div>
+<%# proyect portfolio %>

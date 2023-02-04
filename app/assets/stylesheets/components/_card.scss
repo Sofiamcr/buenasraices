@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   // grid-template-columns: repeat(4,minmax(0,1fr));
   // grid-template-rows: repeat(7,minmax(0,1fr));
   grid-gap: 1.25rem;
@@ -35,7 +35,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     // grid-template-columns: repeat(4,minmax(0,1fr));
     // grid-template-rows: repeat(7,minmax(0,1fr));
     // grid-gap: 1.25rem;
@@ -45,7 +45,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
   }
 }
 
@@ -56,30 +56,32 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 60vh;
   width: 100%;
   img{
     object-fit: cover;
     object-position: center;
     height: 100%;
-    width: 50%;
+    width: 55%;
   }
   .intro-description{
     height: 100%;
-    width: 50%;
+    width: 45%;
     overflow: auto;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // h4{
-    //   margin-bottom: 2rem;
-    // }
+    h1{
+      color: $tierra;
+      font-size: 5vw;
+      font-style: italic;
+    }
     p{
       text-align: center;
       margin:1rem 1rem;
-      font-size: calc(1rem + 0.2vw)
+      font-size: calc(1rem + 0.2vw);
+      color: $marron;
     }
   }
 }
@@ -101,6 +103,34 @@
         margin:0.1rem 0.1rem;
         font-size: calc(0.8rem + 0.2vw)
       }
+    }
+  }
+}
+.project-intro{
+  padding: 2rem 1rem 1rem 1rem;
+  h1{
+    font-family: $my-font;
+    color: $verde;
+  }
+}
+.card-proyect{
+  width: 440px;
+  img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-fit: center;
+  }
+  .card-proyect-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-right: 0.5vh ;
+    // margin-left: 0.5vh ;
+    color: $gris;
+    font-size: small;
+    i{
+      color: $paleta2;
     }
   }
 }
