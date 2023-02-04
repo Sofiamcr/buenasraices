@@ -13,7 +13,7 @@
       <%= image_tag("Deck.webp", class: "picture-carousel d-sm-block w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("Pergola.webp", class: "picture-carousel d-sm-block w-100") %>
+      <%= image_tag("Cerco.webp", class: "picture-carousel d-sm-block w-100") %>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -35,7 +35,8 @@
     <%= link_to "Discover", categories_path, class: "btn btn-rounded"%>
   </div>
 </div>
-<div class="slider-wrapper mt-3">
+<div class="slider-wrapper">
+  <div class="btn left"> < </div>
   <div class="slider">
     <% @categories.each do |category| %>
       <%= link_to category_path(category) do %>
@@ -44,5 +45,6 @@
         </div>
       <% end %>
     <% end %>
-    </div>
+  </div>
+  <div class="btn right"> > </div>
 </div>
