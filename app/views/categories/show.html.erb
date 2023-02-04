@@ -9,12 +9,20 @@
     </div>
   </div>
 
+
   <%# proyect portfolio %>
   <div class="cards">
     <% @proyects.each do |proyect|%>
       <div class="card-proyect">
-        <% first_photo= proyect.photos.first %>
-        <%= cl_image_tag first_photo.key, height: 300, width: 400, crop: :fill %>
+        <div data-controller="lightbox">
+          <% proyect.photos.each_with_index do |photo, index| %>
+            <% if index.zero?%>
+              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+            <% else %>
+              <a href="<%=photo.url %>"></a>
+            <% end %>
+          <% end %>
+        </div>
         <div class="card-proyect-info">
           <%=proyect.name %>
           <%= proyect.wood %>
